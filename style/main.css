@@ -286,6 +286,23 @@ a {
   box-shadow: 0px 4px 98px 0px rgba(255, 222, 64, 0.59);
 }
 
+.btn__fixed {
+  display: none;
+}
+@media (max-width: 768px) {
+  .btn__fixed {
+    display: inline-block;
+    width: 92.5%;
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    font-size: 18px;
+  }
+}
+
 .element-animation {
   opacity: 0;
   transform: translateY(20px);
