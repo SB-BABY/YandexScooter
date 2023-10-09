@@ -1,0 +1,60 @@
+.club{
+    &__title{
+        @include title;
+        font-size: 57px;
+        letter-spacing: -1.7px;
+        max-width: 700px;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 64px;
+        column-gap: 33px;
+        margin-top: 38px;
+    }
+
+    &__img{
+        width: 83px;
+        height: 83px;
+    }
+
+    &__text{
+        margin-top: 17px;
+        letter-spacing: 0.3px;
+        max-width: 91%;
+    }
+}
+
+@include bigPhone{
+    .club__title{
+        font-size: 34px;
+        margin-top: 32px;
+        line-height: 93%;
+    }
+
+    .club__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 29px;
+        margin-top: 33px;
+    }
+
+    .club__item{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        margin-left: 10px;
+    }
+
+    .club__img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .club__text{
+        font-size: 16px;
+        max-width: 65%;
+        margin-top: 0;
+    }
+}

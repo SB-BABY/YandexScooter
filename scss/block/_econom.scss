@@ -1,0 +1,107 @@
+.econom {
+    margin-top: 118px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 32px;
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: -26.5%;
+        left: 12%;
+        &-scooter {
+            position: relative;
+            top: -24.5%;
+            left: -45.5%;
+        }
+
+        &-text {
+            position: absolute;
+            top: 9%;
+            left: -28%;
+            animation: 6s rotate infinite linear;
+        }
+    }
+
+    &__content {
+        grid-column: 2;
+    }
+
+    &__title {
+        @include title;
+        font-size: 48px;
+        letter-spacing: -0.96px;
+        max-width: 800px;
+    }
+
+    &__text {
+        @include text;
+        max-width: 440px;
+        line-height: 120%;
+        max-width: 91%;
+        margin-top: 33px;
+    }
+
+    &__btn {
+        display: inline-block;
+        margin-top: 41px;
+    }
+}
+
+@include mobile {
+    .econom {
+        margin-top: 33px;
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img {
+            position: relative;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            &-scooter {
+                position: absolute;
+                top: -25.5%;
+                left: -38%;
+                max-width: 174%;
+                height: auto;
+            }
+
+            &-text {
+                position: absolute;
+                top: -10%;
+                left: -8%;
+                max-width: 121%;
+            }
+        }
+
+        &__content {
+            margin-top: 34px;
+        }
+
+        &__title {
+            font-size: 33px;
+            line-height: 97%;
+            letter-spacing: -1.2px;
+            max-width: 82%;
+        }
+
+        &__text {
+            margin-top: 23px;
+            font-size: 18px;
+            line-height: 105%;
+            letter-spacing: -1px;
+            max-width: 84%;
+        }
+
+        &__btn {
+            margin-top: 29.5px;
+            padding: 14px 87px;
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+// ШРИФТЫ
+@font-face {
+    font-family: "YS";
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src:
+        local("helvet"),
+        url("./../../fonts/text-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "YS";
+    font-weight: 500;
+    /* Браузер сначала попробует найти шрифт локально */
+    src:
+        local("helvet"),
+        url("./../../fonts/text-medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "YS";
+    font-weight: 900;
+    /* Браузер сначала попробует найти шрифт локально */
+    src:
+        local("helvet"),
+        url("./../../fonts/text-black.woff") format("woff");
+}
+// ШРИФТЫ
+
+// СТАНДАРТНЫЕ СТИЛИ ДЛЯ КОНКРЕТНОГО МАКЕТА
+
+body {
+    font-family: $font-main;
+    background-color: $white;
+    color: $dark;
+    font-size: 24px;
+    // overflow: hidden;
+    // Стараться искать абзац целый и от него писать стандартный шрифт
+    // overflow: hidden;
+}
+
+a {
+    color: $dark;
+    transition: color 0.3s ease-in-out;
+    // &:hover {
+    //     color: $green;
+    // }
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 946px;
+    overflow: visible;
+}
+
+.btn {
+    color: $dark;
+    font-weight: 500;
+    background-color: $yellow;
+    padding: 19px 49px;
+    border-radius: 36px;
+    position: relative;
+    box-shadow: 0px 4px 98px 0px rgba(255, 222, 64, 0.59);
+}
+
+.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
+.none {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    } // or 360deg
+}
+// СТАНДАРТНЫЕ СТИЛИ ДЛЯ КОНКРЕТНОГО МАКЕТА

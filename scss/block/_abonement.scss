@@ -1,0 +1,56 @@
+.abonement {
+    margin-top: 99px;
+    // overflow: hidden;
+
+    &__container {
+        position: relative;
+    }
+    &__title {
+        @include title;
+        font-size: 49px;
+        max-width: 44%;
+        line-height: 98%;
+        letter-spacing: -1.7px;
+    }
+
+    &__text {
+        @include text;
+        font-size: 24px;
+        max-width: 46.5%;
+        line-height: 120%;
+        letter-spacing: 0px;
+        margin-top: 35px;
+    }
+
+    &__img-bg{
+        position: absolute;
+        top: -52.5%;
+        right: -26%;
+    }
+}
+
+@include mobile{
+    .abonement{
+        margin-top: 68px;
+        &__title{
+            font-size: 33px;
+            line-height: 97%;
+            letter-spacing: -1.2px;
+            max-width: 82%;
+        }
+
+        &__text{
+            margin-top: 23px;
+            font-size: 18px;
+            line-height: 105%;
+            letter-spacing: -1px;
+            max-width: 87%;
+        }
+        &__img-bg{
+            display: none;
+        }
+
+    }
+
+    
+}
