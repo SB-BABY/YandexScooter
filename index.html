@@ -10,38 +10,44 @@
     <title>SCOOTER YANDEX</title>
 </head>
 
-<!-- // АНИМАЦИЯ -->
-<!-- animation: 6s rotate infinite linear; -->
-
 <body>
 
     <!-- HEADER -->
     <header class="header element-animation">
 
         <div class="container header__container">
+            <div class="header__left">
                 <a href="#" class="header__logo">
-                    <img src="./image/logo.svg" alt="Логоип" class="header__logo-img">
+                    <img src="./image/logo.svg" alt="Логотип" class="header__logo-img">
                 </a>
-    
+
                 <h1 class="header__title">
                     Вступайте в клуб Самокатов
                 </h1>
-    
+
                 <p class="header__text">
-                    Купите абонемент, чтобы стать <br> частью клуба в новом сезоне–2024. <br> 8 месяцев за 499 ₽
+                    Купите абонемент, чтобы стать <br> частью клуба в новом сезоне–2024. <br> 8 месяцев за  <span
+                        class="price-tag">
+                        <span class="price-new">499₽</span>
+                        <span class="price-label">3190₽</span>
+                    </span>
                 </p>
-    
-                <a href="https://go.yandex/ru_ru/lp/rides/scooter" class="header__btn btn">
+
+                <a target="_blank" href="https://go.yandex/ru_ru/lp/rides/scooter" class="header__btn btn">
                     Стать частью клуба
                 </a>
-
-                <img src="./image/01_header/scooter.png" alt="" class="header__img-scooter">
-                <img src="./image/01_header/text__circle.png" alt="" class="header__img-text">
-
-            <div class="header__img-mobile">
-                <img src="./image/01_header/scooter__mobile.png" alt="" class="header__img-scooter-mobile">
-                <img src="./image/01_header/text__circle-mobile.png" alt="" class="header__img-text-mobile">
             </div>
+
+            <div class="header__right">
+                <!-- <img src="./image/01_header/scooter.png" aria-hidden="true" class="header__img-scooter"> -->
+                <img src="./image/01_header/scooter__no-bg.png" aria-hidden="true" class="header__img-scooter">
+                <img src="./image/01_header/text__circle.png" aria-hidden="true" class="header__img-text">
+            </div>
+
+            <!-- <div class="header__img-mobile">
+                <img src="./image/01_header/scooter__mobile.png" aria-hidden="true" class="header__img-scooter-mobile">
+                <img src="./image/01_header/text__circle-mobile.png" aria-hidden="true" class="header__img-text-mobile">
+            </div> -->
         </div>
 
         <div class="header__gradient"></div>
@@ -60,30 +66,32 @@
 
                 <ul class="club__list">
                     <li class="club__item">
-                        <img src="./image/02_club/1.svg" alt="" class="club__img">
+                        <img src="./image/02_club/1.svg" aria-hidden="true" class="club__img">
                         <p class="club__text">
                             0 ₽ за старт в каждой поездке
                         </p>
                     </li>
 
                     <li class="club__item">
-                        <img src="./image/02_club/2.svg" alt="" class="club__img">
+                        <img src="./image/02_club/2.svg" aria-hidden="true" class="club__img">
                         <p class="club__text">
-                            Катаетесь с друзьями? Бронируйте до трёх самокатов с аккаунта с абонементом — так у всех будет бесплатный старт
+                            Катаетесь с друзьями? Бронируйте до трёх самокатов с аккаунта с абонементом — так у всех
+                            будет бесплатный старт
                         </p>
                     </li>
 
                     <li class="club__item">
-                        <img src="./image/02_club/3.svg" alt="" class="club__img">
+                        <img src="./image/02_club/3.svg" aria-hidden="true" class="club__img">
                         <p class="club__text">
                             Бесплатная пауза 15 минут в поездке — например, чтобы зайти за кофе или передохнуть
                         </p>
                     </li>
 
                     <li class="club__item">
-                        <img src="./image/02_club/4.svg" alt="" class="club__img">
+                        <img src="./image/02_club/4.svg" aria-hidden="true" class="club__img">
                         <p class="club__text">
-                            Если самокат недостаточно заряжен или с ним неудобно переходить дорогу, замените по пути на другой — это бесплатно
+                            Если самокат недостаточно заряжен или с ним неудобно переходить дорогу, замените по пути на
+                            другой — это бесплатно
                         </p>
                     </li>
                 </ul>
@@ -92,37 +100,40 @@
         <!-- CLUB -->
 
         <!-- EXCLUSIVE -->
-        <section class="exclusive element-animation">
+        <section class="exclusive">
             <div class="container exclusive__container">
                 <h2 class="exclusive__title">
                     Эксклюзивный доступ к событиям Самокатов
                 </h2>
 
                 <p class="exclusive__text">
-                    С абонементом — у вас доступ к специальным мероприятиям, скидки и классный мерч. В 2023 году мы танцевали на Даче Плюс с Антохой MC, катались на самокатах с Сергеем Мезенцевым и слушали хор Attaque de Panique
+                    С абонементом — у вас доступ к специальным мероприятиям, скидки и классный мерч. В 2023 году
+                    мы танцевали на Даче Плюс с Антохой MC, катались на самокатах с Сергеем Мезенцевым и слушали хор
+                    Attaque de Panique
                 </p>
-
-                <img src="./image/03_exclusive/icon__slider-item.png" alt="" class="exclusive__slider-icon">
 
                 <ul class="exclusive__list exclusive__slider">
                     <li class="exclusive__item">
-                        <img src="./image/03_exclusive/01.png" alt="" class="exclusive__item-img img-1">
-                        <img src="./image/03_exclusive/1__icon.png" alt="" class="exclusive__item-icon img__icon-1">
+                        <img src="./image/03_exclusive/01.png" alt="Событие Яндекса" class="exclusive__item-img img-1">
+                        <img src="./image/03_exclusive/1__icon.png" aria-hidden="true"
+                            class="exclusive__item-icon img__icon-1">
                     </li>
                     <li class="exclusive__item">
-                        <img src="./image/03_exclusive/2.png" alt="" class="exclusive__item-img img-2">
-                        <img src="./image/03_exclusive/2__icon.png" alt="" class="exclusive__item-icon img__icon-2">
+                        <img src="./image/03_exclusive/2.png" alt="Событие Яндекса" class="exclusive__item-img img-2">
+                        <img src="./image/03_exclusive/2__icon.png" aria-hidden="true"
+                            class="exclusive__item-icon img__icon-2">
                     </li>
                     <li class="exclusive__item">
-                        <img src="./image/03_exclusive/3.png" alt="" class="exclusive__item-img img-3">
+                        <img src="./image/03_exclusive/3.png" alt="Событие Яндекса" class="exclusive__item-img img-3">
                     </li>
                     <li class="exclusive__item">
-                        <img src="./image/03_exclusive/4.png" alt="" class="exclusive__item-img img-4">
-                        <img src="./image/03_exclusive/4__icon.png" alt="" class="exclusive__item-icon img__icon-4">
+                        <img src="./image/03_exclusive/4.png" alt="Событие Яндекса" class="exclusive__item-img img-4">
+                        <img src="./image/03_exclusive/4__icon.png" aria-hidden="true"
+                            class="exclusive__item-icon img__icon-4">
                     </li>
                 </ul>
                 <div class="exclusive__slider-arrows"></div>
-                
+
             </div>
         </section>
         <!-- EXCLUSIVE -->
@@ -135,10 +146,11 @@
                 </h2>
 
                 <p class="abonement__text">
-                    За каждую поездку на самокатах такие пользователи получают кешбэк баллами. Баллы можно тратить на поездки на самокатах и такси с Яндекс Go, покупки и заказы в других сервисах Яндекса
+                    За каждую поездку на самокатах такие пользователи получают кешбэк баллами. Баллы можно тратить
+                    на поездки на самокатах и такси с Яндекс Go, покупки и заказы в других сервисах Яндекса
                 </p>
 
-                <img src="./image/04_abonement/scooter__bg.png" alt="" class="abonement__img-bg">
+                <img src="./image/04_abonement/scooter__bg.png" alt="Самокат с Яндекс.Плюс" class="abonement__img-bg">
             </div>
         </section>
 
@@ -148,8 +160,8 @@
         <section class="econom element-animation">
             <div class="container econom__container">
                 <div class="econom__img">
-                    <img src="./image/05_econom/scooter.png" alt="" class="econom__img-scooter">
-                    <img src="./image/05_econom/text__circle.png" alt="" class="econom__img-text">
+                    <img src="./image/05_econom/scooter.png" alt="Самокат Яндекса" class="econom__img-scooter">
+                    <img src="./image/05_econom/text__circle.png" aria-hidden="true" class="econom__img-text">
                 </div>
 
                 <div class="econom__content">
@@ -158,10 +170,12 @@
                     </h2>
 
                     <p class="econom__text">
-                        Присоединяйтесь — опция начнёт действовать в начале сезона–2024. Об открытии сезона предупредим заранее, чтобы вы были готовы
+                        Присоединяйтесь — опция начнёт действовать в начале сезона–2024. Об открытии сезона предупредим
+                        заранее, чтобы вы были готовы
                     </p>
 
-                    <a href="#" class="econom__btn btn">Хочу абонемент</a>
+                    <a target="_blank" href="https://go.yandex/ru_ru/lp/rides/scooter" class="econom__btn btn">Хочу
+                        абонемент</a>
                 </div>
             </div>
         </section>
@@ -195,7 +209,7 @@
     </footer>
     <!-- FOOTER -->
 
-    <a href="https://go.yandex/ru_ru/lp/rides/scooter" class="btn__fixed btn">
+    <a target="_blank" href="https://go.yandex/ru_ru/lp/rides/scooter" class="btn__fixed btn">
         Стать частью клуба
     </a>
 
