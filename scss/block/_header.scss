@@ -1,4 +1,7 @@
 .header {
+    padding-top: 115px;
+    position: relative;
+    overflow: hidden;
     background: var(
         --Linear,
         linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
@@ -11,52 +14,130 @@
         )
     );
 
-    overflow: hidden;
-    position: relative;
-
     &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         position: relative;
-        z-index: 10;
+    }
+
+    &__right {
+        position: relative;
     }
 
     &__logo {
-        margin-top: calc(6px + (123 - 15) * (100vw / 1440));
-        display: block;
-        width: 100%;
+        max-width: 100%;
         img {
-            max-width: 33%;
+            // max-width: 100%;
         }
     }
 
     &__title {
         @include title;
+        line-height: 98%;
         letter-spacing: -2.44px;
-        font-size: calc(36px + (72 - 36) * (100vw / 1440));
-        max-width: 42%;
-        margin-top: calc(22px + (72 - 32) * (100vw / 1440));
+        font-size: 73.5px;
+        max-width: 420px;
+        margin-top: 61.5px;
     }
 
     &__text {
         @include text;
         font-size: 24px;
-        letter-spacing: -1.6px;
-        max-width: 45%;
-        font-weight: 900;
-        margin-top: calc(14px + (48 - 35) * (100vw / 1440));
+        font-style: normal;
+        font-weight: 500;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        line-height: 130%;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    &__price {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 500px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.63) 0%, rgba(255, 255, 255, 0.63) 100%),
+            radial-gradient(141.42% 141.42% at 100% 0%, #e0b8ff 0%, #b6b9ff 100%);
+        padding: 20px 40px;
+    }
+
+    .price-tag {
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        // bottom: 0;
+        right: 0.5%;
+        min-width: 115px;
+        height: 33px;
+        padding-right: 17px;
+        padding-left: 94px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.63) 0%, rgba(255, 255, 255, 0.63) 100%),
+            radial-gradient(141.42% 141.42% at 100% 0%, #e0b8ff 0%, #b6b9ff 100%);
+        border-radius: 500px;
+    }
+    .price-new {
+        position: absolute;
+        left: 0;
+        font-weight: 500;
+        border-radius: 500px;
+        background: radial-gradient(141.42% 141.42% at 100% 0%, #e0b8ff 0%, #b6b9ff 100%);
+        padding-top: 1.5px;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    .price-label {
+        // box-sizing: border-box;
+        flex: 0 0 auto;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.6px;
+        color: grey;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $dark-gray;
+        }
+    }
+
+    .new__price {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 1px;
+        position: absolute;
+    }
+
+    .old__price {
+        color: #808080;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
     }
 
     &__img-scooter {
         position: absolute;
-        top: -35.5%;
-        left: 16.5%;
+        // top: -36%;
+        // left: 16.5%;
+        // left: -69.5%;
+        top: -12%;
+        left: -38.5%;
         z-index: -1;
     }
 
     &__img-text {
         position: absolute;
-        top: 40.5%;
-        left: 55.5%;
+        top: 40%;
+        // left: 55.5%;
+        left: 11.5%;
         animation: 6s rotate infinite linear;
     }
 
@@ -66,7 +147,7 @@
 
     &__btn {
         display: inline-block;
-        margin-top: 41px;
+        margin-top: 36px;
         margin-bottom: 120px;
     }
 
@@ -77,48 +158,57 @@
         width: 100%;
         height: 200px;
     }
-
 }
 
+@media screen and (max-width: 920px) {
+    .header {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__img-scooter {
+            position: relative;
+            left: 0;
+            top: 0;
+            max-width: 100%;
+        }
 
+        &__img-text {
+            top: 49%;
+            left: 26.5%;
+        }
 
-@include tablet {
-    .header__img-scooter {
-        top: -41.5%;
-        left: 10.5%;
-    }
-
-    .header__img-text {
-        top: 40.5%;
-        left: 49.5%;
+        &__btn {
+            margin-bottom: 0;
+        }
     }
 }
 
 @include mobile {
     .header__title {
-        max-width: 45%;
-    }
-    .header__img-scooter {
-        top: -40.5%;
-        left: 8.5%;
+        max-width: 300px;
     }
 
-    .header__img-text {
-        top: 38.5%;
-        left: 55.5%;
+    .header__img-text{
+        max-width: 26%;
     }
 }
 
 @include bigPhone {
+    .header{
+        padding-top: 30px;
+    }
+    .header__logo-img{
+        max-width: 25.5%;
+    }
     .header__title {
         font-size: 36px;
         margin-top: 27px;
         letter-spacing: -0.7px;
+        width: 200px;
     }
 
     .header__text {
-        display: flex;
-        flex-wrap: nowrap;
         font-size: 19px;
         font-weight: 500;
         letter-spacing: -0.5px;
@@ -127,35 +217,17 @@
         margin-top: 25px;
     }
 
-    .header__img-scooter,
-    .header__img-text {
+    .header .price-tag {
+        height: 26px;
+    }
+
+    .header__btn {
         display: none;
     }
-    .header__img-mobile {
-        display: block;
-        position: relative;
-        width: 100%;
-    }
-
-    .header__img-scooter-mobile {
-        position: relative;
-        left: -7.5%;
-    }
-
-    .header__img-text-mobile {
-        position: absolute;
-        top: 49%;
-        left: 17.5%;
-        animation: 6s rotate infinite linear;
-    }
-    .header__btn{
-        display: none;
-    }
-
 }
 
 @include phone {
-    .header__logo{
+    .header__logo {
         margin-top: 30px;
     }
     .header__img-text-mobile {
