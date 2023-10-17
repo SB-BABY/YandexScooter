@@ -197,6 +197,9 @@
 @include bigPhone {
     .header{
         padding-top: 30px;
+        &__gradient{
+            height: 40px;
+        }
     }
     .header__logo-img{
         max-width: 25.5%;
@@ -219,6 +222,8 @@
 
     .header .price-tag {
         height: 26px;
+        padding-left: 79px;
+        min-width: 110px;
     }
 
     .header__btn {
